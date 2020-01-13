@@ -5,3 +5,4 @@ Its first goal is to gather the necessary tools to create a serious-game to crea
 
 This library contains two class of objects, one to communicate with the API and the other one to communicate with the database. It also contains generals functions using both classes.
 
+For more informations please read the documentation.
