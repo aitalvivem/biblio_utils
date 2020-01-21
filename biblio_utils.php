@@ -71,7 +71,7 @@ class Api_manager{
 	* @param	$_main_lg	(String)	Language code for the lexemes
 	* @param	$_trad_lg	(String)	Language code of the translations
 	*/
-	public function __construct(url, $nom, $mdp, $main_lg, $trad_lg){
+	public function __construct($url, $nom, $mdp, $main_lg, $trad_lg){
 		require_once 'Requests-master/library/Requests.php';
 		Requests::register_autoloader();
 		
@@ -206,7 +206,7 @@ class Api_manager{
 		// create the data
 		$data_sens = '{"glosses":{';
 		foreach($infos as $cle => $valeur){
-			$data_sens .= '"'.$valeur['language'].'": {"value": "'.$valeur['value'].'", "language" : "'.$valeur['language'].'"},';
+			$data_sens .= '"'.$valeur['language'].'": {"value": "'.str_replace('"', '\"', $valeur['value']).'", "language" : "'.$valeur['language'].'"},';
 		}
 		$data_sens = substr($data_sens, 0, -1);
 		$data_sens .= '}}';
