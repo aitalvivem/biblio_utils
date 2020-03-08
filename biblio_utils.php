@@ -858,7 +858,6 @@ class Db_manager{
 	}
 	
 	/**
-	* getAssocTest	Méthode qui retourne la liste des association pouvant servir de test selon une variété.
 	* getAssocTest	Return a list of Association that could be used for testinf users, for a given variety.
 	* 
 	* @access	public
